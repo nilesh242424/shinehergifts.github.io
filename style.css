@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("assets/jewelry-bg.jpg") center/cover no-repeat;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(2px);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  color: #f5d37b;
+  animation: glow 3s infinite alternate;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.coming {
+  margin-top: 40px;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-top: 15px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, #d4af37, #fff, #d4af37);
+  margin: 30px 0;
+}
+
+.launch {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.9);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .coming {
+    font-size: 2.2rem;
+  }
+}
